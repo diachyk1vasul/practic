@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <p> Привіт</p>
 </head>
-
 <body>
-    test <script> src= "app.js" </script>
+    <form onsubmit="return submitCounter()" action=""> 
+        <input id="firstInput" value="1" type="number">
+        <input id="secondInput" type="number">
+        <button type="submit">Submit</button>
+   </form>
+   <div id="display"></div>
+    <script src= "app.js"></script>
 </body>
 </html>

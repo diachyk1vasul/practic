@@ -1,14 +1,22 @@
-var i = 0;
-for ( i = 0; i < 100; i++){
-     
-    return i;
+var inputContent = document.getElementById("display");
+var firstInput = document.getElementById('firstInput');
+var secondInput = document.getElementById('secondInput');
+
+function counter(firstNumber, secondNumber) {
+    for (var i = firstNumber; i <= secondNumber; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            inputContent.innerHTML += " <b>Three & Five </b> " + i + "<br>";
+        } else if (i % 3 === 0) {
+            inputContent.innerHTML += "<b>Three </b>" + i + "<br>";
+        } else if (i % 5 === 0) {
+            inputContent.innerHTML += " <b>Five </b>" + i + "<br>";
+        } else {
+            inputContent.innerHTML += i + "<br>";
+        } 
+    }
 }
- if ( i > 0) {
-     console.log(1);
- } else  if (i === 0) {
-     console.log(1);
- } else  if (i <= 0) {
-    console.log(1);
-} else{
-    console.log(1);
+function submitCounter() {
+    counter(firstInput.value, secondInput.value);
+
+    return false;
 }
